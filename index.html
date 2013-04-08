@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="todoService">
+<html ng-app="TodoService">
 <head>
     <title>jQM Angular Sample</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -14,7 +14,7 @@
     <script src="public/js/services.js"></script>
     <script src="public/js/controllers.js"></script>
 </head>
-<body ng-controller="TodoListController">
+<body ng-controller="TodoController">
 <!--Todo List Page-->
 <div id="todo-list" data-role="page">
     <div data-role="header">
@@ -22,7 +22,7 @@
         <a href="#todo-detail" ng-click="newTodo()" data-icon="add" class="ui-btn-right">New</a>
     </div>
     <div data-role="content">
-        <ul id="todolist" data-role="listview" data-filter="true">
+        <ul data-role="listview" data-filter="true">
             <li ng-repeat="todo in todos">
                 <a href="#todo-detail" data-transition="slide" ng-click="selectTodo(todo._id)" value="{{todo._id}}">{{todo.description}}</a>
             </li>

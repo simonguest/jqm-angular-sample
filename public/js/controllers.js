@@ -1,4 +1,4 @@
-function TodoListController($scope, Todo) {
+function TodoController($scope, Todo) {
     $scope.todos = Todo.query();
 
     $scope.selectTodo = function (id) {
